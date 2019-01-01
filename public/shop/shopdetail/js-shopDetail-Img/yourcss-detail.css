@@ -1,0 +1,40 @@
+	.abc-gallery-div img{
+		margin: 10px;
+		width:100%;
+	}
+	.abc-gallery-div li{
+		list-style: none;
+	}
+	.single-right h4{
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+.div-screen>td ,th{
+	/*border: 1px #c6bebe solid;*/
+    /*opacity: 0.9;*/
+    padding: 5px;
+    cursor: pointer !important;
+}
+.div-screen td:hover{
+	background-color: #ff9900;
+	color:white;
+	/*cursor: pointer !important;*/
+}
+
+.table-detail-Product{
+	margin-top:10px;
+	border-top:1px #c6bebe solid ;
+}
+
+
+.table-view-cart{
+	text-align: center;
+}
+	.table-view-cart td, tr, th{
+	text-align: center;
+	color:black !important;
+}
+
+.modal-dialog{
+	width:85%;
+}			

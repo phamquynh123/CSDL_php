@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="bai1()">Click</button>
+	<script type="text/javascript">
+		function bai1(){
+			var a=0;
+			document.write(" Các số chia hết cho 3 và 7 là : ")
+			for (var i =0; i <=100; i++) {
+				if(i% 21==0){
+					a+=1;
+					document.write(" " + i+ " , ");
+				}
+			}
+			document.write("<br>" );
+			document.write("Số lượng các số chia hết cho 3 và 7 là :" +a);
+		}
+	</script>
+
+	<button onclick="bai2()"> Bài 2 </button>
+	<script type="text/javascript">
+		function bai2(){
+			var n = parseInt(prompt("Nhập số cần kiểm tra"));
+			var s=0;
+			var index=0;
+			while(index <= n)
+		    	{ s=s+index;
+		    		index++;
+				}
+			document.write("tổng từ 0 đến "+n+" là :"+s)
+		}
+	</script>
+
+	<button onclick="bai3()"> Bài 3</button>
+	<script type="text/javascript">
+		function bai3(){
+			var n = parseInt(prompt("Nhập số cần kiểm tra : "));
+			var s=0;
+			var giaithua=1;
+			for (var i = 1; i <=n; i++) {
+    			giaithua=giaithua*i;
+    			s+=1/giaithua;
+    		}
+			
+			document.write("tổng can tìm là :"+s)
+		}
+	</script>
+
+
+	<button onclick="bai4()"> Bài 4</button>
+	<script type="text/javascript">
+		function bai4(){
+			var m=parseInt(prompt("nhập số m= "));
+			var n=parseInt(prompt("nhập số n= "));
+			var k=parseInt(prompt("nhập số k= "));
+			var s=0;
+			for (var i = m; i <= n; i++) {
+				if(i%k==0){
+					s=s+i;
+				}		
+			}
+			document.write(" tổng các số chia hết cho "+k+ " trong khoảng từ "+ m+" đến "+n +" là "+s);
+		}
+	</script>
+
+	<button onclick="bai5()"> Bài 5</button>
+	<script type="text/javascript">
+		function bai5(){
+			var n= parseInt(prompt("Nhập số n= "));
+			var s=0;
+			for (var i = 1; i <= n; i++) {
+				s=s+1/i;
+			}
+			document.write(s);
+		}
+	</script>
+
+	<button onclick="bai6()"> Bài 6</button>
+	<script type="text/javascript">
+		function bai6(){
+			var s=0;
+			for (var i = 0; i <= 20; i=i+2) {
+				s=s+i;
+			}
+			document.write('tổng của 10 số chẵn đầu tiên: '+s);
+		}
+	</script>
+
+	<button onclick="bai7()"> Bài 7</button>
+	<script type="text/javascript">
+		function bai7(){
+			for (var i = 1; i <= 7; i++) {
+				for (var j =  1; j <= 7; j++) {
+					if(i>=j){
+						document.write("*");
+					}
+				}
+				document.write("<p>");
+			}
+
+			document.write("<hr>");
+			for (var i = 1; i <= 7; i++) {
+				for (var j =  1; j <= 7; j++) {
+					document.write("*");
+				}
+				document.write("<p>");
+			}
+
+			document.write("<hr>");
+			for (var i = 1; i <= 7; i++) {
+				for (var j =  1; j <= 7; j++) {
+					if(i==1||i==7||j==1||j==7){
+						document.write("*");
+					}else{
+						document.write("&nbsp&nbsp");
+					}
+				}document.write("<p>");
+			}
+
+
+		
+			document.write("<hr>");
+			for (var i = 1; i <= 7; i++) {
+				for (var j =  1; j <= 7; j++) {
+					if(i<=j){
+						document.write("*");
+					}
+				}
+				document.write("<p>");
+			}
+		}
+	</script>
+</body>
+</html>

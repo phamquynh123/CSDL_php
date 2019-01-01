@@ -1,0 +1,202 @@
+/* -------------- >>>   A B C - G A L L E R Y - C S S  <<< ------------- */
+/* ---------------------- BASIC STYLES OF GALLERY -----------------------*/
+
+/* ------------------------------------------- BUTTONS FONT STYLE for IE >= 9 and another new Browsers. 
+---------------------------------------------- For IE <= 8 will be used images ... !!! :before is not working
+---------------------------------------------- IF YOU CHNAGED FOLDERS, TAKE CARE ABOUT 
+---------------------------------------------- embedded IMAGES IN 'abc-gallery_1.0.js'-file !!! */
+@font-face {
+	font-family: 'icomoon';
+/* ------------------------------------------- !!! CARE ABOUT RIGHT PATH !!! */
+	src:  url('abc-gallery_layout/icomoon_buttons_font/icomoon.eot');
+	src:  url('abc-gallery_layout/icomoon_buttons_font/icomoon.eot') format('embedded-opentype'),
+			url('abc-gallery_layout/icomoon_buttons_font/icomoon.ttf') format('truetype'),
+			url('abc-gallery_layout/icomoon_buttons_font/icomoon.woff') format('woff'),
+			url('abc-gallery_layout/icomoon_buttons_font/icomoon.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icons * {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ------------------------------------------- A B C - O V E R L A Y */
+/* switch off the 'border-box' for gallery layout 
+--> when border-box for * 'on' - no influence !!! 
+--> when border-box off - no influence !!! */
+.abc-gallery-overlay,
+.abc-gallery-overlay * {
+  box-sizing: content-box;
+  behavior: none; 
+  *behavior: none;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  padding: 0px;
+  margin: 0px;
+}
+.abc-gallery-overlay {
+/*  display: none;  will be visible in 'abc-gallery_1.0.js'-file !!! */
+  z-index: 99999;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  /* fixed position for IE old versions */
+  position: fixed !important;
+  position: absolute;
+  left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+/* ------------------------------------------- I M G S - D I V */
+.abc-gallery-overlay div.abc-div-for-images {
+  position: relative;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* ------------------------------------------- B U T T O N S !!! */
+.abc-nav-btns {
+  position: absolute;
+  z-index: 9999999;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  text-align: center; /* for IE 6-8 to center inside div */
+  padding-top: 7px;
+/* opacity:0.5; /* not so good visual solution for IE <= 8 !!! BUT YOU CAN TRY IT ))
+/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);*/ /* IE6, IE7, IE8 */
+/*-moz-opacity:0.5;
+  -khtml-opacity: 0.5;
+  zoom: 1;*/
+}
+div.abc-nav-btns > div {
+  position: relative;
+  margin: 0 auto;
+}
+.abc-prev,
+.abc-next,
+.abc-play-pause,
+.abc-close {
+  position: relative;
+  height: 60px;
+  width: 60px;
+
+  background-size: 100%;
+  display: inline-block;
+  zoom: 1; /* hasLayout */
+  *display: inline; /* IE < 7 */
+  margin-right: 15px;
+  cursor: pointer;
+}
+.abc-close {
+  margin-right: 0px;
+}
+/* FOR IE 6-8 --> background images !!! */
+.abc-img-prev {
+  background-image: url("abc-gallery_layout/icomoon_buttons_font/icomoon-imgs/actual-imgs/left.jpg");
+}
+.abc-img-next {
+  background-image: url("abc-gallery_layout/icomoon_buttons_font/icomoon-imgs/actual-imgs/right.jpg");
+}
+.abc-img-play {
+  background-image: url("abc-gallery_layout/icomoon_buttons_font/icomoon-imgs/actual-imgs/play.jpg");
+}
+.abc-img-pause {
+  background-image: url("abc-gallery_layout/icomoon_buttons_font/icomoon-imgs/actual-imgs/pause.jpg");
+}
+.abc-img-close {
+  background-image: url("abc-gallery_layout/icomoon_buttons_font/icomoon-imgs/actual-imgs/cancel.jpg");
+}
+/* FOR IE 6-8 --> icon fonts !!! */
+.abc-ico-prev:before,
+.abc-ico-next:before,
+.abc-ico-play:before,
+.abc-ico-pause:before,
+.abc-ico-close:before {
+/* FOR NEW BROWSERS BUTTONS FROM FONT --> more in in 'abc-gallery_1.0.js'-file !!! */
+  font-size: 64px;
+}
+.abc-ico-prev:before {
+  content: "\e904";
+}
+.abc-ico-next:before {
+  content: "\e903";
+}
+.abc-ico-play:before {
+  content: "\e900";
+}
+.abc-ico-pause:before {
+  content: "\e902";
+}
+.abc-ico-close:before {
+  content: "\e901";
+  margin-right: 0px;
+}
+/* ------------------------------------------------------------------------------ P R E L O A D E R */
+.abc-preloader {
+  position: absolute;
+  width: 100%;
+  display: none;
+  text-align: center; /* for IE 6-8 to center 'abc-preloader-inside' */
+}
+.abc-preloader-inside {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin: 0 auto !important; /* for new browsers to center */
+}
+div.abc-preloader-bg {
+  height: 80px;
+  width: 80px;
+  margin: 18px 20px 20px 20px;
+  background-size: 100%;
+  background-image: url("abc-gallery_layout/abc-gallery-images/preloader_gif_svg/spin.gif"); /* gif animation for IE */
+}
+.abc-preloader svg{
+  height: 80px;
+  width: 80px;
+  margin: 18px 20px 20px 20px;
+}
+/* ------------------------------------------------------------------------------ N O - I M A G E */
+.abc-no-image {
+  position: absolute;
+  width: 100%;
+  display: none;
+  text-align: center; /* for IE 6-8 to center 'abc-no-img-inside' */
+/*--- nice styling for text message --- for example*/
+/*font-size: 44px;
+  font-family: "open_sans"; */
+/*--- nice styling for text message --- for example*/
+}
+.abc-no-img-inside {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  margin: 0 auto !important; /* for new browsers to center */
+/*--- nice styling for text message --- for example*/
+/*width: 320px;*/
+/*--- nice styling for text message --- for example*/  
+}
+div.abc-no-image-bg {
+  height: 100px;
+  width: 100px;
+  margin: 18px 20px 20px 20px;
+  background-size: 100%;
+  background-image: url("abc-gallery_layout/abc-gallery-images/no_image_png_svg/no-image.png"); /* png-image for IE */
+}
+.abc-no-image svg {
+  height: 100px;
+  width: 100px;
+  margin: 18px 20px 20px 20px;
+}
