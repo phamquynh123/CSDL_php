@@ -5,7 +5,7 @@
 	if (isset($_GET['mod'])) {
 		$mod = $_GET['mod'];
 	}else{
-		$mod = 'products';
+		$mod = 'shop';
 	}
 
 	if (isset($_GET['act'])) {
@@ -14,7 +14,7 @@
 		$act = 'list';
 	}
 	switch ($mod) {
-		case "login":{
+		case "login":{	
 			include_once("controllers/LoginController.php");
 
 			$login=new LoginController();

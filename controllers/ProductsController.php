@@ -50,10 +50,10 @@
 			$insert['brand_id']=$_POST['brandd'];
 			$insert['created_at'] =date('Y-m-d H:i:s');
 			$data= $pro->insert($insert);
-
+			// print_r($data); die;
 			$id = $pro->getNewId();
 			$data=$pro->find($id);
-			// print_r($data); die;
+			
 			$response = json_encode($data);
 			echo $response;
 		}

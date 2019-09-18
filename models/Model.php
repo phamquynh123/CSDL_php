@@ -94,6 +94,7 @@
 		}
 		function setQuery($sql)
 		{
+			
 			$this->sql = $sql;
 			// echo $sql;
 		}
