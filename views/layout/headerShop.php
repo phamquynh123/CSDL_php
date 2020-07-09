@@ -86,11 +86,7 @@
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
 						<li><a href="products.html">LTU15</a></li>
-						<li><a href="household.html">Nhóm 14</a></li>
 						<li><a href="#">Phạm Thị Quỳnh</a></li>
-						<li><a href="#">Nguyễn Phúc Quý</a></li>
-						<li><a href="#">Dương Trần Hoài Sơn</a></li>
-						<li><a href="#">Đỗ Đình Thắng</a></li>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
